@@ -18,7 +18,7 @@ public class UserApiRoute extends RouteBuilder {
 		
 		from("direct:httpRoute")
         .log("Http Route started")
-        .setHeader(Exchange.HTTP_METHOD).constant(HttpMethod.GET);
-//        .to("http:www.mocky.io/v2/5d8d0b7d2e0000fbcfabde94?bridgeEndpoint=true&amp;throwExceptionOnFailure=false");
+        .setHeader(Exchange.HTTP_METHOD).constant(HttpMethod.GET)
+        .to("http:www.mocky.io/v2/5d8d0b7d2e0000fbcfabde94?bridgeEndpoint=true&amp;throwExceptionOnFailure=false");
 	}
 }
